@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*ortalamalar için ortak sınıflar*/
+.align-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+    background-color: bisque;
+    padding: 20px 10px;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7)
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.align-container-column {
+    border-radius: 10px;
+    margin-top: 30px;
+    
+    box-sizing: border-box;
+    flex-basis: 30%;
+
+}
+
+/*header*/
+header {
+    background-color: rgb(58, 179, 138);
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/bg.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    /* background-color: rgb(247, 250, 250);*/
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    /*background-color: violet;*/
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    background-color: red;
+    display: block;
+    margin: auto;
+    height: 3px;
+    margin-top: 5px;
+}
+
+.nav-links ul li a:hover:after {
+    background-color: blue;
+    width: 100%;
+    transition: 0.5s;
+}
+
+nav .bi {
+    color: rgb(223, 34, 34);
+    font-size: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+/*text-box*/
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h1 {
+    font-size: 60px;
+}
+
+.text-box p {
+    margin: 10px 40px;
+    color: white;
+}
+
+.hero-btn {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    transition: 0.3s;
+    background-color: rgb(20, 103, 211);
+    border: 1px solid rgb(166, 224, 29);
+}
+
+/*Kurslar*/
+h1 {
+    font-size: 35px;
+}
+
+p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 300px;
+    line-height: 20px;
+    padding: 10px;
+}
+/*Yerlerimiz*/
+.campus-col{
+    overflow: hidden;
+    position: relative;
+}
+.campus-col img{
+    width: 100%;
+    z-index: 2;
+    display: block;
+}
+.layer{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    font-size: 25px;
+    font-weight: 500px;
+
+}
+.layer:hover{
+    background-color: rgba(200, 0, 0, 0.5);
+}
+.layer h3 {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    bottom: 0;
+    transition: .3s;
+    font-size: 25px;
+    font-weight: 500;
+    /*background-color: #777;*/
+}
+.layer:hover h3{
+    color: white;
+    opacity: 1;
+    bottom: 50%;
+    transition: .4s;
+    
+}
+
+/*Birimlerimiz*/
+.facilities-col{
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+.facilities-col p{
+    margin: 16px 0;
+}
+/*testemonials-col*/
+.testemonials-col{
+    flex-basis: 30%;
+    background-color: rgba(243, 238, 231, 0.7);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+}
+.testemonials-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 50px;
+}
+.testemonials-col div p{
+    padding: 10px;
+}
+.testemonials-col div .bi{
+    color: red;
+}
+/*ua*/
+.ua{
+    background-color: violet;
+    margin-top: 100px;
+    padding: 100px 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/london.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.ua h1{
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 30px;
+}
+/*Footer*/
+.connection .bi{
+    color: red;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 50px 10px;
+    height: 40px;
+    opacity: 0.7;
+    font-size: 40px;
+}
+.connection .bi:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.bi-heart-pulse-fill{
+    color: red;
+}
+
+
+/*responsive*/
+@media(max-width:576px){
+    nav .bi {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .text-box h1 {
+        font-size: 40px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
